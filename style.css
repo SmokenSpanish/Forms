@@ -46,10 +46,22 @@
     display: flex;
     flex-direction: column;
     width: 350px;
-    border: 1px solid red;
 }
 
 .form__field {
     color: white;
     margin-bottom: 10px;
+}
+
+.form__input {
+    border: none;
+    border-bottom: 1px solid rgb(58, 55, 55);
+    margin-bottom: 10px;
+    background-color: inherit;
+    color: white;
+}
+
+.form__input:focus {
+    outline: none;
+    background-color: black;
 }
