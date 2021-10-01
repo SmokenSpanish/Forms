@@ -65,3 +65,11 @@
     outline: none;
     background-color: black;
 }
+
+.form__input:invalid {
+    border-bottom: 1px solid red;
+}
+
+.form__input:valid {
+    border-bottom: 1px solid green;
+}
