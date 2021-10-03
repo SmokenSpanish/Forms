@@ -118,5 +118,10 @@
 .form__button {
     height: 40px;
     font-size: 1.6em;
+    transition: opacity 0.3s linear;
+}
+
+.form__button:hover {
+    opacity: 0.7;
 }
 
