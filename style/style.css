@@ -1,0 +1,122 @@
+@import url(../vendor/normalize.css);
+
+
+.body {
+    width: 100vw;
+    background-color:black;
+}
+
+.header {
+    width: 80%;
+    height: 150px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    background-color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-bottom: 1px solid rgb(58, 55, 55);
+    margin-bottom: 20px;
+}
+
+.header__title {
+    color: white;
+    margin: 0;
+    font-size: 3em;
+}
+
+.header__image {
+    position: absolute;
+    top: 55px;
+    width: 300px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 500px;
+    padding: 20px;
+    background-image: url(../images/1625572649_33-phonoteka-org-p-uzori-na-zastavku-krasivie-zastavki-33.jpg);
+    background-size: cover;
+    
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.form__field {
+    color: white;
+    margin-bottom: 10px;
+    font-size: 2em;
+}
+
+.form__input {
+    border: none;
+    border-bottom: 1px solid rgb(58, 55, 55);
+    margin-bottom: 10px;
+    background-color: inherit;
+    color: white;
+    margin-bottom: 30px;
+    font-size: 1.3em;
+}
+
+
+.form__input:focus {
+    outline: none;
+    background-color: black;
+    height: 30px;
+}
+
+.form__input:invalid {
+    border-bottom: 1px solid red;
+}
+
+.form__input:valid {
+    border-bottom: 1px solid green;
+}
+
+.checkbox-container {
+    margin-bottom: 50px;
+    clip-path: (X1, Y1, X2, Y2);
+}
+
+.form__input_type_checkbox-invisible {
+    position: absolute;
+    width: 1px; /* если у элемента не будет размеров, некоторые браузеры посчитают, что его вообще нет */
+    height: 1px;
+    overflow: hidden; /* без этого свойства тоже сработает, но так наверняка. Мы его ещё изучим, оно скрывает элементы, выходящие за границы родителя */
+    clip: rect(0 0 0 0);
+}
+
+.form__input_type_checkbox-invisible + .form__input_type_checkbox-visible {
+   display: inline-block;
+   vertical-align: middle;
+   width: 20px;
+   height: 20px;
+   border: 1px solid white; 
+   margin-right: 15px;
+}
+
+
+.form__input_type_checkbox-invisible:checked + .form__input_type_checkbox-visible {
+   background-image: url(../images/checkmark-transparent-handwritten-9.png);
+   background-size: contain;
+}
+
+.form__input_type_checkbox-text {
+    font-size: 20px;
+    color: white;
+}
+
+
+
+.form__button {
+    height: 40px;
+    font-size: 1.6em;
+}
+
