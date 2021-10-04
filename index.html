@@ -17,53 +17,72 @@
     </header>
 
     <section class="main">
-        <form class="form">
-            <label for="" class="form__field">Регистрация</label>
+        <form class="form" novalidate>
+            <h2 class="form__title">Регистрация</h2>
+            <label for="" class="form__field">
             <input class="form__input form__input_type_name" 
             type="text" 
             name="" 
-            id="" 
+            id="name-input" 
             placeholder="Name" 
             minlength="2"
             maxlength="20"
             required>
+            <span class="form__input-error name-input-error"></span>
+        </label>
+            <label for="" class="form__field">
             <input class="form__input form__input_type_email" 
             type="email" 
             name="" 
-            id="" 
+            id="email-input" 
             placeholder="E-mail" 
             required>
+            <span class="form__input-error email-input-error"></span>
+        </label>
+        <label for="" class="form__field">
             <input class="form__input form__input_type_password" 
             type="password" 
             name="" 
-            id="" 
+            id="password-input" 
             placeholder="Password" 
             minlength="6"
             maxlength="15"
             required>
-            <label class="checkbox-container">
-            <input type="checkbox" class="form__input_type_checkbox-invisible" required>
+            <span class="form__input-error password-input-error"></span>
+        </label>
+            <label class="checkbox-container form__field">
+            <input type="checkbox" 
+            class="form__input_type_checkbox-invisible" 
+            id="checkbox-input"
+            required>
             <span class="form__input_type_checkbox-visible"></span>
             <span class="form__input_type_checkbox-text">Согласен на обработку данных</span>
+            <span class="form__input-error checkbox-input-error"></span>
             </label>
             <button class="form__button">Зарегистрироваться</button>
         </form>
-        <form class="form">
-            <label for="" class="form__field">Авторизация</label>
-            <input class="form__input form__input_type_email" 
-            type="email" 
-            name="" 
-            id="" 
-            placeholder="E-mail" 
-            required>
-            <input class="form__input form__input_type_password" 
-            type="password" 
-            name="" 
-            id="" 
-            placeholder="Password" 
-            minlength="6"
-            maxlength="15"
-            required>
+        <form class="form" novalidate>
+            <h2 class="form__title">Авторизация</h2>
+            <label for="" class="form__field">
+                <input class="form__input form__input_type_email" 
+                type="email" 
+                name="" 
+                id="email-input" 
+                placeholder="E-mail" 
+                required>
+                <span class="form__input-error email-input-error"></span>
+            </label>
+            <label for="" class="form__field">
+                <input class="form__input form__input_type_password" 
+                type="password" 
+                name="" 
+                id="password-input" 
+                placeholder="Password" 
+                minlength="6"
+                maxlength="15"
+                required>
+                <span class="form__input-error password-input-error"></span>
+            </label>
             <button class="form__button">Войти</button>
         </form>
     </section>
