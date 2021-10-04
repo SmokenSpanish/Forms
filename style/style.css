@@ -36,23 +36,29 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 500px;
     padding: 20px;
     background-image: url(../images/1625572649_33-phonoteka-org-p-uzori-na-zastavku-krasivie-zastavki-33.jpg);
     background-size: cover;
-    
 }
 
 .form {
     display: flex;
     flex-direction: column;
     width: 40%;
+    margin-bottom: 50px;
+}
+
+.form:last-of-type {
+    border-top: 1px solid rgb(58, 55, 55);
+}
+
+.form__title {
+    color: white;
 }
 
 .form__field {
-    color: white;
     margin-bottom: 10px;
-    font-size: 2em;
+    position: relative;
 }
 
 .form__input {
@@ -69,11 +75,23 @@
 .form__input:focus {
     outline: none;
     background-color: black;
-    height: 30px;
+    height: 24px;
 }
 
-.form__input:invalid {
+.form__input_type_error {
     border-bottom: 1px solid red;
+}
+
+.form__input-error {
+    color: red;
+    position: absolute;
+    left: 0;
+    top: 27px;
+    visibility: hidden;
+}
+
+.form__input-error_active {
+    visibility: visible;
 }
 
 .form__input:valid {
