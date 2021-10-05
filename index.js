@@ -1,8 +1,3 @@
-const form = document.querySelector('.form');
-const formInput = form.querySelector('.form__input')
-const formError = form.querySelector(`.${formInput.id}-error`)
-
-
 const showError = (form, formElement, errorMessage) => {
     const errorElement = form.querySelector(`.${formElement.id}-error`);
     formElement.classList.add('form__input_type_error');
