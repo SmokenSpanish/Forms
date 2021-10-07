@@ -2,7 +2,12 @@
 
 
 .body {
+    background-color:black;
+}
+
+.page {
     max-width: 1280px;
+    min-width: 320px;
     background-color:black;
     margin: 0 auto;
 }
@@ -32,13 +37,16 @@
     width: 300px;
 }
 
-.main {
+.content {
+    max-width: 1170px;
+    min-width: 320px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     background-image: url(../images/1625572649_33-phonoteka-org-p-uzori-na-zastavku-krasivie-zastavki-33.jpg);
     background-size: cover;
+    margin: 0 auto;
 }
 
 .form {
@@ -133,7 +141,6 @@
 }
 
 
-
 .form__button {
     height: 40px;
     font-size: 1.6em;
@@ -141,7 +148,6 @@
 }
 
 .form__button_inactive {
-    /* opacity: 0.5; */
     background-color: inherit;
     color: white;
 }
@@ -151,3 +157,41 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+    .header__title {
+        font-size: 2em;
+    }
+    
+    .header__image {
+        width: 200px;
+    }
+
+    .form__title {
+        font-size: 1.5em;
+    }
+    
+    .form__input {
+        font-size: 1em;
+    }
+
+    .form__input_type_checkbox-invisible + .form__input_type_checkbox-visible {
+        width: 10px;
+        height: 10px;
+    }
+
+    .form__input_type_checkbox-text {
+        font-size: 1em;
+    }
+
+    .form__button {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    .form__button {
+        font-size: 0.8em;
+    }
+
+}
