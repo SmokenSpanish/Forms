@@ -6,7 +6,7 @@
 }
 
 .page {
-    max-width: 1280px;
+    max-width: 1480px;
     min-width: 320px;
     background-color:black;
     margin: 0 auto;
@@ -38,7 +38,7 @@
 }
 
 .content {
-    max-width: 1170px;
+    max-width: 1470px;
     min-width: 320px;
     display: flex;
     align-items: center;
@@ -47,6 +47,20 @@
     background-image: url(../images/1625572649_33-phonoteka-org-p-uzori-na-zastavku-krasivie-zastavki-33.jpg);
     background-size: cover;
     margin: 0 auto;
+    position: relative;
+}
+
+.content:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0.2;
+    z-index: 0;
 }
 
 .form {
@@ -54,6 +68,7 @@
     flex-direction: column;
     width: 40%;
     margin-bottom: 50px;
+    z-index: 1;
 }
 
 .form:last-of-type {
