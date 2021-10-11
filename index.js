@@ -1,17 +1,18 @@
 class FormValidation {
-    constructor(formElement) {
+    constructor(optons, formElement) {
         this._formElement = formElement;
   }
-
-}
-
-
-const showError = (form, formElement, errorMessage) => {
-    const errorElement = form.querySelector(`.${formElement.id}-error`);
+    _showError = (formElement, errorMessage) => {
+    const errorElement = this._formElement.querySelector(`.#${formElement.id}-error`);
     formElement.classList.add('form__input_type_error');
     errorElement.classList.add('form__input-error_active');
     errorElement.textContent = errorMessage;
 }
+
+}
+
+
+
 const hideError = (form, formElement) => {
     const errorElement = form.querySelector(`.${formElement.id}-error`);
     formElement.classList.remove('form__input_type_error');
