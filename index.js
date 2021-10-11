@@ -1,3 +1,11 @@
+class FormValidation {
+    constructor(formElement) {
+        this._formElement = formElement;
+  }
+
+}
+
+
 const showError = (form, formElement, errorMessage) => {
     const errorElement = form.querySelector(`.${formElement.id}-error`);
     formElement.classList.add('form__input_type_error');
