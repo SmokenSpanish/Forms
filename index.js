@@ -1,5 +1,5 @@
 class FormValidation {
-    constructor(optons, formElement) {
+    constructor(formElement) {
         this._formElement = formElement;
     }
     _showError = (formElement, errorMessage) => {
@@ -70,5 +70,11 @@ class FormValidation {
 
 }
 
+const regForm = document.querySelector('.form-registration');
+const authForm = document.querySelector('.form-auth');
 
+const regFormValidator = new FormValidation(regForm)
+const authFormValidator = new FormValidation(authForm)
 
+regFormValidator.enableValidation();
+authFormValidator.enableValidation();
