@@ -78,3 +78,5 @@ const authFormValidator = new FormValidation(authForm)
 
 regFormValidator.enableValidation();
 authFormValidator.enableValidation();
+
+const progress
