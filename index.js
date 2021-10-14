@@ -1,3 +1,50 @@
+const progress = document.getElementById("progress");
+const prev = document.getElementById("btnPrev");
+const next = document.getElementById("btnNext");
+const circles = document.querySelectorAll(".circle");
+
+console.log(circles)
+
+let currentValue = 1;
+
+next.addEventListener("click", function () {
+    currentValue++;
+    if (currentValue > circles.length) {
+        currentValue = circles.length;
+    }
+    update();
+});
+
+prev.addEventListener("click", function () {
+    currentValue--;
+    if (currentValue < 1) {
+        currentValue = 1;
+    }
+    update();
+});
+
+function update() {
+    circles.forEach((circle, index) => {
+        if (index < currentValue) {
+            circle.classList.add("circle__type_active");
+        } else {
+            circle.classList.remove("circle__type_active");
+        }
+    });
+
+
+    const actives = document.querySelectorAll(".circle__type_active");
+    progress.style.width = ((actives.length - 1) / (circles.length - 1)) * 100 + '%';
+    if (currentValue === circles.length) {
+        next.disabled = true;
+    } else if (currentValue <= 1) {
+        prev.disabled = true;
+    } else {
+        next.disabled = false;
+        prev.disabled = false;
+    }
+}
+
 class FormValidation {
     constructor(formElement) {
         this._formElement = formElement;
@@ -29,7 +76,7 @@ class FormValidation {
     _toggleButtonState = () => {
         const findAtLeastOneNotValid = (inputElement) => !inputElement.validity.valid;
         const hasInvalidInput = this._inputList.some(findAtLeastOneNotValid)
-        
+
 
         if (hasInvalidInput) {
             this._buttonElement.setAttribute("disabled", true);
@@ -46,7 +93,7 @@ class FormValidation {
         });
         this._inputList = Array.from(this._formElement.querySelectorAll('.form__input'));
         this._buttonElement = this._formElement.querySelector('.form__button');
-        
+
         const inputListIterator = (inputElement) => {
             const handleInput = () => {
                 this._checkInputValidity(inputElement);
@@ -66,7 +113,7 @@ class FormValidation {
     clearValidation() {
         this._inputList.forEach(this._hideError);
         this._toggleButtonState();
-      }
+    }
 
 }
 
@@ -79,46 +126,3 @@ const authFormValidator = new FormValidation(authForm)
 regFormValidator.enableValidation();
 authFormValidator.enableValidation();
 
-const progress = document.getElementById("progress");
-const prev = document.getElementById("btnPrev");
-const next = document.getElementById("btnNext");
-const circles = document.querySelectorAll(".circle");
-
-let currentValue = 1;
-
-next.addEventListener("click", () => {
-    currentValue++;
-   if (currentValue > circles.length) {
-       currentValue = circles.length;
-   }
-   update();
-});
-
-prev.addEventListener("click", () => {
-    currentValue--;
-   if (currentValue < 1) {
-       currentValue = 1;
-   }
-   update();
-});
-
-function update() {
-    circles.forEach((circle, index) => {
-        if (index < currentValue) {
-            circle.classList.add("circle__type_active");
-        } else {
-            circle.classList.remove("circle__type_active");
-        }
-    })
-}
-
-const actives = document.querySelectorAll(".circle__type_active");
-progress.style.width = ((actives.length -1) / (circles.length - 1)) * 100 + '%';
-if (currentValue === circles.length) {
-    next.disabled = true;
-} else if (currentValue <= 1) {
-    prev.disabled = true;
-} else {
-    next.disabled = false;
-    prev.disabled = false;
-}
