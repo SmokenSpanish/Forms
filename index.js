@@ -16,8 +16,7 @@ console.log(circles)
 
 let currentValue = 1;
 
-prev.addEventListener("click", function (evt) {
-    console.log(next.evt)
+next.addEventListener("click", function (evt) {
     currentValue++;
     if (currentValue > circles.length) {
         currentValue = circles.length;
