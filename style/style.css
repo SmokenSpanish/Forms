@@ -63,9 +63,7 @@
 }
 
 .container {
-    /* transform: translate(-50%, -50%); */
     color: white;
-    border: 1px solid red;
     z-index: 1;
 }
 
@@ -86,7 +84,7 @@
     background-color: #fafafa;
     margin: auto;
     position: absolute;
-    top: 15px; left: 0; bottom: 0; right: 0;
+    top: 11px; left: 0; bottom: 0; right: 0;
 }
 
 .progress {
@@ -110,16 +108,16 @@
     border: 3px solid #f1f1f1;
     border-radius: 50px;
     z-index: 1;
-    margin-top: 9px;
+    margin-top: 12px;
 }
 
 .circle__type_active {
-    border-color: #17B978;
+    border-color: #21df93;
     transition: 0.6s ease-in;
 }
 
 .circle__type_done {
-    background: #17B978;
+    background: #ade7d0;
 }
 
 .progress__button {
