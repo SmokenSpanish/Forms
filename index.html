@@ -21,8 +21,8 @@
             <div class="container">
                 <div class="progress-container">
                     <div class="progress" id="progress"></div>
-                    <div class="circle circle__type_active">1</div>
-                    <div class="circle">2</div>
+                    <div class="circle circle-first circle__type_active">1</div>
+                    <div class="circle circle-second">2</div>
                 </div>
                 <button class="progress__button" id="btnPrev">Prev</button>
                 <button class="progress__button" id="btnNext">Next</button>
@@ -50,7 +50,7 @@
                     <span class="form__input_type_checkbox-text">Согласен на обработку данных</span>
                     <span class="form__input-error checkbox-input-error"></span>
                 </label>
-                <button class="form__button">Зарегистрироваться</button>
+                <button class="form__button button__type_reg">Зарегистрироваться</button>
             </form>
             <form class="form form-auth" novalidate>
                 <h2 class="form__title">Авторизация</h2>
@@ -64,7 +64,7 @@
                         placeholder="Password" minlength="6" maxlength="15" required>
                     <span class="form__input-error password-input-error"></span>
                 </label>
-                <button class="form__button">Войти</button>
+                <button class="form__button button__type_auth">Войти</button>
             </form>
 
         </main>

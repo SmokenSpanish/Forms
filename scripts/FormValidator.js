@@ -43,6 +43,7 @@ export default class FormValidation {
     _setEventListeners = () => {
         this._formElement.addEventListener('submit', (evt) => {
             evt.preventDefault();
+            
         });
         this._inputList = Array.from(this._formElement.querySelectorAll('.form__input'));
         this._buttonElement = this._formElement.querySelector('.form__button');

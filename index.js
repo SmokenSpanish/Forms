@@ -4,7 +4,9 @@ import { regForm,
         progress, 
         prev, 
         next, 
-        circles } from "./scripts/constants.js";
+        circles,
+        regButton, 
+        authButton } from "./scripts/constants.js";
 
 const regFormValidator = new FormValidation(regForm)
 const authFormValidator = new FormValidation(authForm)
@@ -16,12 +18,16 @@ console.log(circles)
 
 let currentValue = 1;
 
-next.addEventListener("click", function (evt) {
-    currentValue++;
-    if (currentValue > circles.length) {
-        currentValue = circles.length;
-    }
-    update();
+regForm.addEventListener("submit", () => {
+    const circleFirst = document.querySelector('.circle-first');
+    const circleSecond = document.querySelector('.circle-second')
+    circleFirst.classList.add("circle__type_done");
+    circleSecond.classList.add("circle__type_active");
+});
+
+authForm.addEventListener("submit", () => {
+    const circle = document.querySelector('.circle-second')
+    circle.classList.add("circle__type_active");
 });
 
 prev.addEventListener("click", function () {
